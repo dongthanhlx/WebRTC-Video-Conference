@@ -12,14 +12,34 @@
 		<script src='/js/room.js'></script>
 		<link rel="stylesheet" type="text/css" href="/css/room.css" media="screen" />
 		<title>Video Conference</title>
+
+        <!-- INCLUDE JEELIZ FACEFILTER SCRIPT -->
+        <script type="text/javascript" src="/threejs/dist/jeelizFaceFilter.js"></script>
+
+        <!-- INCLUDE THREE.JS -->
+		<script type="text/javascript" src="/threejs/v97/three.min.js"></script>
+
+        <!-- INCLUDE JQUERY -->
+        <script type="text/javascript" src="/threejs/jquery/jquery-3.3.1.min.js"></script>
+    
+        <!-- INCLUDE JEELIZRESIZER -->
+        <script type="text/javascript" src="/threejs/helpers/JeelizResizer.js"></script>
+
+        <!-- INCLUDE JEELIZTHREEJSHELPER -->
+        <script type="text/javascript" src="/threejs/helpers/JeelizThreejsHelper.js"></script>
+
+		<!-- INCLUDE DEMO SCRIPT -->
+		<script type="text/javascript" src="/threejs/demo.js"></script>
+
 	</head>
 
-	<body>
+	<body onload="main()">
 		<div class="container">
 			<div id="videos">
                 <div id="videosWrapper">
 				    <div id="localVideoWrap" class='videoWrap'>
-					    <video class="videoBox" id="localVideo" autoplay></video>
+						<!-- <video class="videoBox"  id="jeeFaceFilterCanvas" autoplay></video> -->
+						<canvas class="videoBox" width="800" height="600" id="jeeFaceFilterCanvas"></canvas>
 					</div>
                 </div>
 			</div>
